@@ -5,16 +5,12 @@ Designed and implemented a secure multi-account AWS environment using AWS Organi
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture Overview
 
-- Management Account (central governance)
-- Member Account (CLOUD-KINGS workload account)
-- Organizational Unit (Prod) for environment isolation
-- IAM Identity Center (SSO) for centralized authentication
-- Cross-account IAM roles using STS
-- CloudTrail + EventBridge for monitoring and auditing
-
----
+- Centralized management account controlling member accounts
+- Organizational Unit (Prod) for workload isolation
+- SCPs applied at OU level for policy enforcement
+- Cross-account access via IAM roles
 
 ## 🔧 Key Implementations
 
@@ -62,7 +58,9 @@ Designed and implemented a secure multi-account AWS environment using AWS Organi
 
 ---
 
+# 🔐 Secure Multi-Account AWS Environment (IAM + SCP)
 
+Designed and implemented a centralized AWS governance model using AWS Organizations, Service Control Policies (SCPs), and IAM to enforce least privilege and control access across multiple accounts.
 
 ## 📸 Implementation Walkthrough
 
@@ -86,11 +84,12 @@ Organized accounts under the Prod OU to enable centralized governance and policy
 ![Move](./screenshots/03-account-moved.png)
 
 ---
-### 4. Service Control Policy (SCP) Created
+## 4. Service Control Policy (SCP) Created
 
 - Created custom SCP "DenyModifyIAMRole"
 - Designed to restrict IAM role modification across accounts
 
+  
 ### 5. SCP Attached to OU
 
 - Attached SCP to "Prod" OU
