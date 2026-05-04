@@ -18,21 +18,21 @@ Designed and implemented a secure multi-account AWS environment using AWS Organi
 ### 1. AWS Organization Created
 Established a centralized management account to govern multiple AWS accounts.
 
-Org
+![Org](./screenshots/01-org-created.png)
 
 ---
 
 ### 2. Organizational Unit (Prod) Created
 Designed an OU structure to isolate production workloads and enforce policies at scale.
 
-OU
+![OU](./screenshots/02-ou-created.png)
 
 ---
 
 ### 3. Member Account Moved to Prod OU
 Organized accounts under the Prod OU to enable centralized governance and policy inheritance.
 
-Move
+![Move](./screenshots/03-account-moved.png)
 
 ---
 
@@ -40,13 +40,13 @@ Move
 - Created custom SCP "DenyModifyIAMRole"  
 - Restricted IAM role modification across accounts  
 
----
+---![SCP](./screenshots/05-scp-policy.png)
 
 ### 5. SCP Attached to OU
 - Attached SCP to Prod OU  
 - Enforced centralized governance across member accounts  
 
-SCP
+![Deny](./screenshots/06-scp-deny-proof.png)
 
 ---
 
