@@ -62,7 +62,7 @@ Designed and implemented a secure multi-account AWS environment using AWS Organi
 
 ---
 
-## 📸 Screenshots
+
 
 ## 📸 Implementation Walkthrough
 
