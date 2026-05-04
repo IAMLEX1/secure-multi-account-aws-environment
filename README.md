@@ -57,11 +57,28 @@ Organized accounts under the Prod OU to enable centralized governance and policy
 - Enforced MFA for secure user authentication  
 
 ---
-
 ### Cross-Account Access (STS)
-- Created IAM role for cross-account access  
-- Configured trust relationship between accounts  
-- Validated access using AssumeRole functionality  
+
+- Created IAM role to allow secure access from management account to member account
+- Configured trust relationship for cross-account role assumption
+- Attached S3 permissions to demonstrate controlled resource access
+- Used AssumeRole to access resources without sharing credentials
+- Verified role assumption by switching roles and accessing S3 resources in the target account
+
+<img src="https://github.com/user-attachments/assets/425548ec-2c4c-4aa6-8487-7e5b502ca7e3" width="900" />
+<img src="https://github.com/user-attachments/assets/ee5c97cc-ba1b-4664-8a1d-f8ce7f728096" width="900" />
+
+### Cross-Account S3 Access
+
+- Configured S3 bucket policy to allow access from a specific IAM role in another account
+- Restricted access using role-based permissions instead of public access
+- Enabled secure cross-account data sharing using least privilege principles and STS AssumeRole
+- Successfully validated access by assuming role and accessing S3 bucket in target account
+
+<img src="https://github.com/user-attachments/assets/f9676217-58ac-4542-81da-409be4d165f8" width="900" />
+
+
+<img src="https://github.com/user-attachments/assets/fcbd05da-ba5a-41b9-8fc0-a67ad1c907fb" width="800" />
 
 ---
 
